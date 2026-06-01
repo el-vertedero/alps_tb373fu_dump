@@ -1,0 +1,22 @@
+service dynamicdataota /vendor/bin/dynamicdataota
+	priority -20
+	user root
+	group root system
+	oneshot
+	disabled
+
+service dynamicdata /vendor/bin/dynamicdata
+	priority -20
+	user root
+	group root system
+	oneshot
+	disabled
+
+on early-init && property:ro.product.brand=Lenovo
+	write /proc/bootprof "INIT:on early-init system.dynamicdataota exec_start"
+	exec - root root -- /vendor/bin/dynamicdataota
+	write /proc/bootprof "INIT:on early-init system.dynamicdataota end"
+	wait /dev/block/by-name/userdata
+	write /proc/bootprof "INIT:on early-init system.dynamicdata exec_start"
+	exec - root root -- /vendor/bin/dynamicdata
+	write /proc/bootprof "INIT:on early-init system.dynamicdata end"
