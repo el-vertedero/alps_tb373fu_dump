@@ -1,0 +1,14 @@
+# TB373FU-user 15 AP3A.240905.015 TB373FU_ROW_OPEN_USER_M21.814_V_ZUI_17.0.04.266_ST_251120 release-keys
+- manufacturer: alps
+- platform: common
+- codename: TB373FU
+- flavor: TB373FU-user
+- release: 15
+- id: AP3A.240905.015
+- incremental: TB373FU_ROW_OPEN_USER_M21.814_V_ZUI_17.0.04.266_ST_251120
+- tags: release-keys
+- fingerprint: Lenovo/TB373FU/TB373FU:15/AP3A.240905.015/ZUI_17.0.04.266_251120_ROW:user/release-keys
+- is_ab: true
+- brand: alps
+- branch: TB373FU-user-15-AP3A.240905.015-TB373FU_ROW_OPEN_USER_M21.814_V_ZUI_17.0.04.266_ST_251120-release-keys
+- repo: alps_tb373fu_dump
