@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FeatureConfig version="20240314">
+
+    <!-- By项目配置此功能，对应ZuiPP中的FeatureList.java -->
+    <!-- AppFreeze : 进程冻结-->
+    <!-- OverHeat : 发热先知-->
+    <!-- PowerBalance : 功耗均衡-->
+    <!-- DeviceIdle : Deviceidle-->
+    <!-- OtherPolicy : 其它应用策略-->
+    <!-- GamePolicy : 游戏策略-->
+    <!-- MultiWindowManager : MultiWindow监控-->
+    <!-- RefreshRateManager : 智能刷新率-->
+    <!-- JankReport : JankReport-->
+    <!--示例<Item>AppFreeze OverHeat</Item>-->
+    <!-- +PERIDOT-205, wuxiao.wt, add, 20240313, for refreshratefunction -->
+    <Item>OtherPolicy GamePolicy MultiWindowManager RefreshRateManager</Item>
+    <!-- -PERIDOT-205, wuxiao.wt, add, 20240313, for refreshratefunction -->
+    <!-- +PERIDOT-1558, yexiaojun.wt, add, 20240411, for OverHeat -->
+    <!-- +PERIDOT-152, mashaokang.wt, add, 20240320, for AppFreeze and power balance -->
+    <!-- +PERIDOT-12743, mashaokang.wt, remove, 20241014, remove power balance -->
+    <Item>AppFreeze OverHeat</Item>
+    <!-- -PERIDOT-12743, mashaokang.wt, remove, 20241014, remove power balance -->
+    <!-- -PERIDOT-152, mashaokang.wt, add, 20240320, for AppFreeze and power balance -->
+    <!-- -PERIDOT-1558, yexiaojun.wt, add, 20240411, for OverHeat -->
+     <Item>DeviceIdle</Item>
+</FeatureConfig>

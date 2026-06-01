@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<list>
+<!-- PERIDOTV-2318 huangyang17 20250324 start -->
+    <config name="all_regional_specialty_apks" value="AppNext;YandexBrowser;YandexSearch;FSKAREN;Theme_Aqua;Theme_DecoCute;Theme_DecoKira;Theme_JapaneseStyle;Theme_Pretty;Theme_Sf;Theme_Stylish;Theme_ToyBox;Theme_Wood;Podcasts;SearchSelector;AudioBook;AmazonMusic;GooglePay;LenovoRUApps;PlayGames;NetflixStubDebug;GPay3;OMRON;Opera;AssistantShell;FamilySpace;RuStore"/>
+<!-- PERIDOTV-2318 huangyang17 20250324 end -->
+    <config name="chrome_home_page" value="http://www.lenovo.com"/>
+</list>

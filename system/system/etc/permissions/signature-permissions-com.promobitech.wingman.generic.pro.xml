@@ -1,0 +1,63 @@
+<permissions>
+  <signature-permissions package="com.promobitech.wingman.generic.pro">
+    <permission name="android.permission.SET_PREFERRED_APPLICATIONS" />
+    <permission name="android.permission.SET_TIME" />
+    <permission name="android.permission.UPDATE_APP_OPS_STATS" />
+    <permission name="android.permission.MANAGE_DEVICE_ADMINS" />
+    <permission name="android.permission.MANAGE_PROFILE_AND_DEVICE_OWNERS" />
+    <permission name="android.permission.MANAGE_USERS" />
+    <permission name="android.permission.INTERACT_ACROSS_USERS" />
+    <permission name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+    <permission name="android.permission.REBOOT" />
+    <permission name="android.permission.WRITE_APN_SETTINGS" />
+
+    <!-- For hotspot handling -->
+    <permission name="android.permission.TETHER_PRIVILEGED" />
+    <permission name="android.permission.OVERRIDE_WIFI_CONFIG" />
+    <permission name="android.permission.MANAGE_APP_OPS_MODES" />
+
+    <!-- App management -->
+    <permission name="android.permission.INSTALL_PACKAGES" />
+    <permission name="android.permission.DELETE_PACKAGES" />
+    <permission name="android.permission.CLEAR_APP_USER_DATA" />
+    <permission name="android.permission.CHANGE_COMPONENT_ENABLED_STATE" />
+    <permission name="android.permission.GRANT_REVOKE_PERMISSIONS" />
+    <permission name="android.permission.GRANT_RUNTIME_PERMISSIONS" />
+    <permission name="android.permission.REVOKE_RUNTIME_PERMISSIONS" />
+    <permission name="android.permission.android.permission.FORCE_STOP_PACKAGES" />
+
+    <!-- Settings management -->
+    <permission name="android.permission.WRITE_SETTINGS" />
+    <permission name="android.permission.WRITE_SECURE_SETTINGS" />
+    <!-- toggle mobile data -->
+    <permission name="android.permission.MODIFY_PHONE_STATE" />
+    <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+    <permission name="android.permission.READ_PHONE_STATE" />
+    <!-- toggle Airplane mode -->
+    <permission name="android.permission.CONNECTIVITY_INTERNAL" />
+    <permission name="android.permission.NETWORK_SETTINGS" />
+
+    <!-- StatusBar management -->
+    <permission name="android.permission.STATUS_BAR" />
+    <permission name="android.permission.EXPAND_STATUS_BAR" />
+
+    <!-- Remote Control -->
+    <permission name="android.permission.INJECT_EVENTS" />
+    <permission name="android.permission.MANAGE_ROLE_HOLDERS" />
+    <permission name="com.android.permissioncontroller.permission.MANAGE_ROLES_FROM_CONTROLLER" />
+    <permission name="android.permission.SET_TIME_ZONE" />
+    <permission name="android.permission.CHANGE_COMPONENT_ENABLED_STATE" />
+
+    <!-- Install apks for which the file path is given by MLP -->
+    <permission name="android.permission.READ_EXTERNAL_STORAGE" />
+    <permission name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- Network related -->
+    <permission name="android.permission.CHANGE_WIFI_STATE" />
+    <permission name="android.permission.ACCESS_WIFI_STATE" />
+    <permission name="android.permission.ACCESS_NETWORK_STATE" />
+    <permission name="android.permission.CHANGE_NETWORK_STATE" /> <!-- To start foreground service -->
+    <permission name="android.permission.FOREGROUND_SERVICE" />
+    <permission name="android.permission.FORCE_STOP_PACKAGES" />
+    <permission name="android.permission.DEVICE_POWER" />
+    <permission name="android.permission.MANAGE_NOTIFICATIONS" />
+  </signature-permissions>
+</permissions>

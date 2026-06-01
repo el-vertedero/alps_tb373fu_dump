@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<list>
+    <!--PERIDOT-13292, ducc1, modify, 20240923, add AssistantShell for RU-->
+    <config name="regional_specialty_apk" value="YandexBrowser;YandexSearch;AppNext;GooglePay;LenovoRUApps;PlayGames;Opera;OperaProvider;AssistantShell;RuStore"/>
+    <!--PERIDOT-5179, yangting3, modify, 20240417, remove googleKeep for remove_apk-->
+    <!--PERIDOT-13292, ducc1, modify, 20240923, remove GeminiStub for RU-->
+    <!--PERIDOTV-2631, caihao2, modify, 20250409, remove Gemini for RU-->
+    <config name="remove_apk" value="Hangouts;BingWallpaper;SquidNote;Translation;GeminiStub;Gemini"/>
+    <config name="timezone" value="Europe/Moscow"/>
+    <config name="MmsConfigMaxSize" value="1024000"/>
+    <config name="language" value="ru_RU"/>
+    <config name="def_time_12_24" value="yes"/>
+    <config name="date_formate_dd_mm_yyyy" value="yes"/>
+    <config name="data_traffic" value="yes"/>
+</list>
+

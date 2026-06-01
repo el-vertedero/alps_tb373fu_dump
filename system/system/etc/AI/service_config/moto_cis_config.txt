@@ -1,0 +1,7 @@
+{
+	"tbcApiKey": "3da8e080bdf31479a06744b931ebc7e9cc06bb1d2c3258cb9f19023e07c0ebcf",
+	"tbcSecret": "f977c2863591a9691a18000af370c519",
+
+	"motoApiKey": "7b5b82eddf9063351b4d6e29ba2eb2d7",
+	"motoDevApiKey": "ka[Hd/+\"c5\"ZSjXUpK)MdLX5zzE%0pHH"
+}

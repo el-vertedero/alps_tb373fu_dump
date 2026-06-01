@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AppPolicy version="20231123">
+    <!--<NameDefine>  Attribute define, do not modify-->
+        <!--<AttributeName name = "PerformanceType" id="0">
+            <AttributeValue value="Game">启用游戏级别高性能</AttributeValue>
+            <AttributeValue value="Full">启用最高级别性能</AttributeValue>
+            <AttributeValue value="LowPower">启用低功耗模式</AttributeValue>
+            <AttributeValue value="Uclamp">启用boost模式</AttributeValue>
+        </AttributeName>
+        <AttributeName name = "GovernorConfig" id="1">
+            <AttributeValue value="Optimize">启动governor节点写入，原schedboost = 100</AttributeValue>
+            <AttributeValue value="Default">启动governor节点写入，原schedboost = 0</AttributeValue>
+        </AttributeName>
+        <AttributeName name = "GameLimitConfig">
+            游戏参数配置，用于游戏助手进行CPUGPU限频提频boost。格式如下：
+            temp1:小核_大核_超大核_GPU|temp2:小核_大核_超大核_GPU（最多支持4个temp类，以“|”分割）
+            均衡模式参数 省电模式参数 野兽模式参数（以“ ”分割）
+        </AttributeName>
+        <AttributeName name = "UPQLimitConfig">
+            UPQ游戏参数配置，在应用支持UPQ时替代均衡模式：
+            temp1:小核_大核_超大核_GPU|temp2:小核_大核_超大核_GPU（最多支持4个temp类，以“|”分割）
+            UPQ级别1参数 UPQ级别2参数 UPQ级别3参数 UPQ级别4参数 UPQ级别5参数（以“ ”分割）
+        </AttributeName>
+        <AttributeName name = "BestImageLimitConfig">
+            极致画质游戏参数配置，在应用设置极致画质时替代GameLimitConfig：
+            temp1:小核_大核_超大核_GPU|temp2:小核_大核_超大核_GPU（最多支持4个temp类，以“|”分割）
+            均衡模式参数 省电模式参数 野兽模式参数（以“ ”分割）
+        </AttributeName>
+        <AttributeName name = "ThermalConfig">
+            设置thermal code，供bsp进行不同的thermal策略
+        </AttributeName>
+        <AttributeName name="AssistentSupport">
+            <AttributeValue value="TGPA">
+                游戏支持TGPA游戏助手，需要等待游戏连接TAssistent。
+            </AttributeValue>
+        </AttributeName>
+        <AttributeName name="RefreshRate">
+            应用/游戏的特殊刷新率要求，在设置中选择智能刷新率后生效
+        </AttributeName>
+        <AttributeName name="PowerSaveRefreshRate">
+            应用/游戏的特殊省电模式刷新率要求，在游戏下拉栏中选择节能模式后生效
+        </AttributeName>
+    </NameDefine>-->
+
+    <AppList type="other">
+        <App name="MultiWindow" pkg="MultiWindow">
+            <!-- 多窗口情况下禁用所有 app policy，包括跑分时策略 具体需求可联系产品@jinzy4-->
+        </App>
+        <!-- 桌面刷新率锁定120，需求变更请联系@jinzy4 -->
+        <!-- <App name="桌面" pkg="com.zui.launcher">
+            <Attribute name="RefreshRateConfig">4</Attribute>
+        </App> -->
+	<App name="桌面" pkg="com.zui.launcher">
+            <Attribute name="RefreshRateConfig">Launcher</Attribute>
+        </App>
+        <!-- 跑分应用列表 -->
+        <App name="Aututu" pkg="com.antutu.benchmark.full">
+            <Attribute name="PerformanceType">Full</Attribute>
+            <!--Attribute name="GovernorConfig">Optimize</Attribute-->
+            <Attribute name="ThermalConfig">700 700 700</Attribute>
+            <Attribute name="RefreshRateConfig">Max</Attribute>
+            <Attribute name="CoolingFanConfig">1</Attribute>
+        </App>
+        <App name="Aututu" pkg="com.antutu.benchmark">
+            <Attribute name="PerformanceType">Full</Attribute>
+            <!--Attribute name="GovernorConfig">Optimize</Attribute-->
+            <Attribute name="ThermalConfig">700 700 700</Attribute>
+            <Attribute name="RefreshRateConfig">Max</Attribute>
+            <Attribute name="CoolingFanConfig">1</Attribute>
+        </App>
+        <App name="Aututu" pkg="com.antutu.ABenchMark">
+            <Attribute name="PerformanceType">Full</Attribute>
+            <!--Attribute name="GovernorConfig">Optimize</Attribute-->
+            <Attribute name="ThermalConfig">700 700 700</Attribute>
+            <Attribute name="RefreshRateConfig">Max</Attribute>
+            <Attribute name="CoolingFanConfig">1</Attribute>
+        </App>
+        <App name="Aututu" pkg="com.antutu.ABenchMark.GL2">
+            <Attribute name="PerformanceType">Full</Attribute>
+            <!--Attribute name="GovernorConfig">Optimize</Attribute-->
+            <Attribute name="ThermalConfig">700 700 700</Attribute>
+            <Attribute name="RefreshRateConfig">Max</Attribute>
+            <Attribute name="CoolingFanConfig">1</Attribute>
+        </App>
+        <App name="Aututu" pkg="com.antutu.ABenchMark.GL3">
+            <Attribute name="PerformanceType">Full</Attribute>
+            <!--Attribute name="GovernorConfig">Optimize</Attribute-->
+            <Attribute name="ThermalConfig">700 700 700</Attribute>
+            <Attribute name="RefreshRateConfig">Max</Attribute>
+            <Attribute name="CoolingFanConfig">1</Attribute>
+        </App>
+        <App name="Aututu" pkg="com.antutu.videobench">
+            <Attribute name="PerformanceType">Full</Attribute>
+            <!--Attribute name="GovernorConfig">Optimize</Attribute-->
+            <Attribute name="ThermalConfig">700 700 700</Attribute>
+            <Attribute name="RefreshRateConfig">Max</Attribute>
+            <Attribute name="CoolingFanConfig">1</Attribute>
+        </App>
+        <App name="Aututu" pkg="com.antutu.tester">
+            <Attribute name="PerformanceType">Full</Attribute>
+            <!--Attribute name="GovernorConfig">Optimize</Attribute-->
+            <Attribute name="ThermalConfig">700 700 700</Attribute>
+            <Attribute name="RefreshRateConfig">Max</Attribute>
+            <Attribute name="CoolingFanConfig">1</Attribute>
+        </App>
+        <App name="Aututu" pkg="com.antutu.ABenchMark5">
+            <Attribute name="PerformanceType">Full</Attribute>
+            <!--Attribute name="GovernorConfig">Optimize</Attribute-->
+            <Attribute name="ThermalConfig">700 700 700</Attribute>
+            <Attribute name="RefreshRateConfig">Max</Attribute>
+            <Attribute name="CoolingFanConfig">1</Attribute>
+        </App>
+        <App name="Aututu" pkg="com.antutu.benchmark.full:refinery">
+            <Attribute name="PerformanceType">Full</Attribute>
+            <!--Attribute name="GovernorConfig">Optimize</Attribute-->
+            <Attribute name="ThermalConfig">700 700 700</Attribute>
+            <Attribute name="RefreshRateConfig">Max</Attribute>
+            <Attribute name="CoolingFanConfig">1</Attribute>
+        </App>
+        <App name="Aututu" pkg="com.antutu.ABenchMark:push">
+            <Attribute name="PerformanceType">Full</Attribute>
+            <!--Attribute name="GovernorConfig">Optimize</Attribute-->
+            <Attribute name="ThermalConfig">700 700 700</Attribute>
+            <Attribute name="RefreshRateConfig">Max</Attribute>
+            <Attribute name="CoolingFanConfig">1</Attribute>
+        </App>
+        <App name="Aututu" pkg="com.antutu.benchmark.full:era">
+            <Attribute name="PerformanceType">Full</Attribute>
+            <!--Attribute name="GovernorConfig">Optimize</Attribute-->
+            <Attribute name="ThermalConfig">700 700 700</Attribute>
+            <Attribute name="RefreshRateConfig">Max</Attribute>
+            <Attribute name="CoolingFanConfig">1</Attribute>
+        </App>
+
+        <App name="Aututu" pkg="com.antutu.benchmark.full:unity">
+            <Attribute name="PerformanceType">Full</Attribute>
+            <!--Attribute name="GovernorConfig">Optimize</Attribute-->
+            <Attribute name="ThermalConfig">700 700 700</Attribute>
+            <Attribute name="RefreshRateConfig">Max</Attribute>
+            <Attribute name="CoolingFanConfig">1</Attribute>
+        </App>
+        <App name="Aututu" pkg="com.antutu.benchmark.full:video">
+            <Attribute name="PerformanceType">Full</Attribute>
+            <!--Attribute name="GovernorConfig">Optimize</Attribute-->
+            <Attribute name="ThermalConfig">700 700 700</Attribute>
+            <Attribute name="RefreshRateConfig">Max</Attribute>
+            <Attribute name="CoolingFanConfig">1</Attribute>
+        </App>
+        <App name="Aututu" pkg="com.antutu.benchmark.full.lite">
+            <!--<Attribute name="PerformanceType">Full</Attribute>
+            <Attribute name="GovernorConfig">Optimize</Attribute
+            <Attribute name="ThermalConfig">700 700 700</Attribute>-->
+            <Attribute name="RefreshRateConfig">Max</Attribute>
+            <!--<Attribute name="CoolingFanConfig">1</Attribute>-->
+        </App>
+        <App name="Aututu" pkg="com.antutu.aibenchmark">
+            <!--<Attribute name="PerformanceType">Full</Attribute>
+            <Attribute name="GovernorConfig">Optimize</Attribute
+            <Attribute name="ThermalConfig">700 700 700</Attribute>-->
+            <Attribute name="RefreshRateConfig">Max</Attribute>
+            <!--<Attribute name="CoolingFanConfig">1</Attribute>-->
+        </App>
+        <App name="Aututu" pkg=".fisheye">
+            <Attribute name="PerformanceType">Full</Attribute>
+            <!--Attribute name="GovernorConfig">Optimize</Attribute-->
+            <Attribute name="ThermalConfig">700 700 700</Attribute>
+            <Attribute name="RefreshRateConfig">Max</Attribute>
+            <Attribute name="CoolingFanConfig">1</Attribute>
+        </App>
+        <App name="androbench" pkg="com.andromeda.androbench2">
+            <Attribute name="PerformanceType">Full</Attribute>
+            <Attribute name="GovernorConfig">Optimize</Attribute>
+            <Attribute name="ThermalConfig">700 700 700</Attribute>
+            <Attribute name="RefreshRateConfig">Max</Attribute>
+            <Attribute name="CoolingFanConfig">1</Attribute>
+            <Attribute name="SqliteSyncOFF">1</Attribute>
+        </App>
+        <App name="3DMark" pkg="com.futuremark.dmandroid.application">
+            <!--            <Attribute name="PerformanceType">Full</Attribute>-->
+            <Attribute name="GovernorConfig">Optimize</Attribute>
+            <Attribute name="ThermalConfig">700 700 700</Attribute>
+            <Attribute name="RefreshRateConfig">Max</Attribute>
+            <Attribute name="CoolingFanConfig">1</Attribute>
+        </App>
+        <App name="PCMark" pkg="com.futuremark.pcmark.android.benchmark">
+            <Attribute name="PerformanceType">Full</Attribute>
+            <Attribute name="GovernorConfig">Optimize</Attribute>
+            <Attribute name="ThermalConfig">700 700 700</Attribute>
+            <Attribute name="RefreshRateConfig">Max</Attribute>
+        </App>
+        <App name="GeekBench5.0" pkg="com.primatelabs.geekbench5">
+            <Attribute name="PerformanceType">Full</Attribute>
+            <Attribute name="GovernorConfig">Optimize</Attribute>
+            <Attribute name="ThermalConfig">700 700 700</Attribute>
+            <Attribute name="RefreshRateConfig">Max</Attribute>
+        </App>
+        <App name="GeekBench6.0" pkg="com.primatelabs.geekbench6">
+            <Attribute name="PerformanceType">Full</Attribute>
+            <Attribute name="GovernorConfig">Optimize</Attribute>
+            <Attribute name="ThermalConfig">700 700 700</Attribute>
+            <Attribute name="RefreshRateConfig">Max</Attribute>
+        </App>
+        <App name="GFXBench" pkg="com.glbenchmark.glbenchmark27">
+            <Attribute name="PerformanceType">Full</Attribute>
+            <Attribute name="GovernorConfig">Optimize</Attribute>
+            <Attribute name="ThermalConfig">700 700 700</Attribute>
+            <Attribute name="RefreshRateConfig">Max</Attribute>
+        </App>
+        <App name="海外PUBG" pkg="com.tencent.ig">
+            <Attribute name="RefreshRateConfig">4</Attribute>
+        </App>
+        <App name="海外PUBG" pkg="com.rekoo.pubgm">
+            <Attribute name="RefreshRateConfig">4</Attribute>
+        </App>
+        <App name="海外PUBG" pkg="com.vng.pubgmobile">
+            <Attribute name="RefreshRateConfig">4</Attribute>
+        </App>
+        <App name="海外PUBG" pkg="com.pubg.krmobile">
+            <Attribute name="RefreshRateConfig">4</Attribute>
+        </App>
+        <App name="海外PUBG" pkg="com.tencent.igce">
+            <Attribute name="RefreshRateConfig">4</Attribute>
+        </App>
+        <App name="英雄联盟手游海外" pkg="com.riotgames.league.wildrift">
+            <Attribute name="RefreshRateConfig">4</Attribute>
+        </App>
+
+        <!-- 温度控制-->
+        <!--<App name="火山极速版" pkg="com.ss.android.ugc.livelite">
+            <Attribute name="ThermalConfig">2010 2010 2010</Attribute>
+        </App>
+        <App name="西瓜视频" pkg="com.ss.android.article.video">
+            <Attribute name="ThermalConfig">2010 2010 2010</Attribute>
+            <Attribute name="RefreshRateConfig">2</Attribute>
+        </App>
+        <App name="小红书" pkg="com.xingin.xhs">
+            <Attribute name="ThermalConfig">4010 4010 4010</Attribute>
+        </App>
+        <App name="番茄免费小说" pkg="com.dragon.read">
+            <Attribute name="ThermalConfig">4010 4010 4010</Attribute>
+        </App>
+        <App name="番茄免费小说" pkg="com.dragon.read">
+            <Attribute name="ThermalConfig">4010 4010 4010</Attribute>
+        </App>
+        <App name="拼多多" pkg="com.xunmeng.pinduoduo">
+            <Attribute name="ThermalConfig">4010 4010 4010</Attribute>
+        </App>
+        <App name="联想浏览器" pkg="com.zui.browser">
+            <Attribute name="ThermalConfig">4010 4010 4010</Attribute>
+        </App>
+        <App name="联想浏览器HD" pkg="com.lenovo.browser.hd">
+            <Attribute name="ThermalConfig">4010 4010 4010</Attribute>
+        </App>
+        <App name="腾讯新闻" pkg="com.tencent.news">
+            <Attribute name="ThermalConfig">4010 4010 4010</Attribute>
+        </App>
+        <App name="QQ浏览器" pkg="com.tencent.mtt">
+            <Attribute name="ThermalConfig">4010 4010 4010</Attribute>
+        </App>
+        <App name="UC浏览器" pkg="com.UCMobile">
+            <Attribute name="ThermalConfig">4010 4010 4010</Attribute>
+        </App>
+        <App name="七猫免费小说" pkg="com.kmxs.reader">
+            <Attribute name="ThermalConfig">4010 4010 4010</Attribute>
+        </App>
+        <App name="京东" pkg="com.jingdong.app.mall">
+            <Attribute name="ThermalConfig">4010 4010 4010</Attribute>
+        </App>
+        <App name="支付宝" pkg="com.eg.android.AlipayGphone">
+            <Attribute name="ThermalConfig">4010 4010 4010</Attribute>
+        </App>
+        <App name="百度" pkg="com.baidu.searchbox">
+            <Attribute name="ThermalConfig">4010 4010 4010</Attribute>
+        </App>
+        <App name="飞书" pkg="com.ss.android.lark">
+            <Attribute name="ThermalConfig">5010 5010 5010</Attribute>
+        </App>
+        <App name="腾讯会议" pkg="com.tencent.wemeet.app">
+            <Attribute name="ThermalConfig">5010 5010 5010</Attribute>
+        </App>
+        <App name="飞书会议" pkg="com.larksuite.meeting.cn">
+            <Attribute name="ThermalConfig">5010 5010 5010</Attribute>
+        </App>
+        <App name="钉钉" pkg="com.alibaba.android.rimet">
+            <Attribute name="ThermalConfig">5020 5020 5020</Attribute>
+        </App>
+        <App name="Teams" pkg="com.microsoft.teams">
+            <Attribute name="ThermalConfig">5030 5030 5030</Attribute>
+        </App>
+        <App name="优酷" pkg="com.youku.phone">
+            <Attribute name="ThermalConfig">1010 1010 1010</Attribute>
+            <Attribute name="RefreshRateConfig">2</Attribute>
+        </App>
+        <App name="腾讯视频" pkg="com.tencent.qqlive">
+            <Attribute name="ThermalConfig">1020 1020 1020</Attribute>
+            <Attribute name="RefreshRateConfig">2</Attribute>
+        </App>
+        <App name="腾讯视频pad" pkg="com.tencent.qqlivepad">
+            <Attribute name="ThermalConfig">1020 1020 1020</Attribute>
+            <Attribute name="RefreshRateConfig">2</Attribute>
+        </App>
+        <App name="爱奇艺" pkg="com.qiyi.video">
+            <Attribute name="ThermalConfig">1030 1030 1030</Attribute>
+            <Attribute name="RefreshRateConfig">2</Attribute>
+        </App>
+        <App name="爱奇艺pad" pkg="com.qiyi.video.pad">
+            <Attribute name="ThermalConfig">1030 1030 1030</Attribute>
+            <Attribute name="RefreshRateConfig">2</Attribute>
+        </App>
+        <App name="哔哩哔哩" pkg="tv.danmaku.bili">
+            <Attribute name="ThermalConfig">1040 1040 1040</Attribute>
+            <Attribute name="RefreshRateConfig">2</Attribute>
+        </App>
+        <App name="哔哩哔哩HD" pkg="tv.danmaku.bilibilihd">
+            <Attribute name="ThermalConfig">1040 1040 1040</Attribute>
+            <Attribute name="RefreshRateConfig">2</Attribute>
+        </App>
+        <App name="芒果TV" pkg="com.hunantv.imgo.activity">
+            <Attribute name="RefreshRateConfig">2</Attribute>
+        </App>
+        <App name="咪咕TV" pkg="com.cmcc.cmvideo">
+            <Attribute name="RefreshRateConfig">2</Attribute>
+        </App>
+        <App name="TikTok" pkg="com.zhiliaoapp.musically">
+            <Attribute name="RefreshRateConfig">2</Attribute>
+        </App>
+        <App name="Netflix" pkg="com.netflix.mediaclient">
+            <Attribute name="RefreshRateConfig">2</Attribute>
+        </App>
+        <App name="Google Play Movies TV" pkg="com.google.android.videos">
+            <Attribute name="RefreshRateConfig">2</Attribute>
+        </App>
+        <App name="YouTube" pkg="com.google.android.youtube">
+            <Attribute name="RefreshRateConfig">2</Attribute>
+        </App>
+        <App name="YouTube Kids" pkg="com.google.android.apps.youtube.kids">
+            <Attribute name="RefreshRateConfig">2</Attribute>
+        </App>
+        <App name="Hotstar" pkg="in.startv.hotstar">
+            <Attribute name="RefreshRateConfig">2</Attribute>
+        </App>
+        <App name="Disney+" pkg="com.disney.disneyplus">
+            <Attribute name="RefreshRateConfig">2</Attribute>
+        </App>
+        <App name="Hulu" pkg="com.hulu.plus">
+            <Attribute name="RefreshRateConfig">2</Attribute>
+        </App>
+        <App name="Amazon Prime Video" pkg="com.amazon.avod.thirdpartyclient">
+            <Attribute name="RefreshRateConfig">2</Attribute>
+        </App>
+        <App name="Twitch" pkg="tv.twitch.android.app">
+            <Attribute name="RefreshRateConfig">2</Attribute>
+        </App>
+        <App name="虎牙直播" pkg="com.duowan.kiwi">
+            <Attribute name="ThermalConfig">1050 1050 1050</Attribute>
+            <Attribute name="RefreshRateConfig">2</Attribute>
+        </App>
+        <App name="斗鱼直播" pkg="air.tv.douyu.android">
+            <Attribute name="ThermalConfig">1050 1050 1050</Attribute>
+            <Attribute name="RefreshRateConfig">2</Attribute>
+        </App>
+        <App name="抖音" pkg="com.ss.android.ugc.aweme">
+            <Attribute name="ThermalConfig">2010 2010 2010</Attribute>
+            <Attribute name="RefreshRateConfig">2</Attribute>
+        </App>
+        <App name="抖音极速版" pkg="com.ss.android.ugc.aweme.lite">
+            <Attribute name="ThermalConfig">2010 2010 2010</Attribute>
+            <Attribute name="RefreshRateConfig">2</Attribute>
+        </App>
+        <App name="快手" pkg="com.smile.gifmaker">
+            <Attribute name="ThermalConfig">2020 2020 2020</Attribute>
+            <Attribute name="RefreshRateConfig">2</Attribute>
+        </App>
+        <App name="快手极速版" pkg="com.kuaishou.nebula">
+            <Attribute name="ThermalConfig">2020 2020 2020</Attribute>
+            <Attribute name="RefreshRateConfig">2</Attribute>
+        </App>
+        <App name="微博" pkg="com.sina.weibo">
+            <Attribute name="ThermalConfig">4010 4010 4010</Attribute>
+        </App>
+        <App name="淘宝" pkg="com.taobao.taobao">
+            <Attribute name="ThermalConfig">4020 4020 4020</Attribute>
+        </App>
+        <App name="今日头条" pkg="com.ss.android.article.news">
+            <Attribute name="ThermalConfig">4030 4030 4030</Attribute>
+        </App>
+        <App name="QQ" pkg="com.tencent.mobileqq">
+            <Attribute name="ThermalConfig">3020 3020 3020</Attribute>
+        </App>
+        <App name="联想换机" pkg="com.zui.clone">
+            <Attribute name="ThermalConfig">1060 1060 1060</Attribute>
+        </App>
+        <App name="腾讯微视" pkg="com.tencent.weishi">
+            <Attribute name="RefreshRateConfig">2</Attribute>
+        </App> -->
+        <!-- 省电类型应用列表 -->
+        <!--<App name="高德地图" pkg="com.autonavi.minimap">
+            <Attribute name="PerformanceType">LowPower</Attribute>
+            <Attribute name="ThermalConfig">6010 6010 6010</Attribute>
+            <Attribute name="RefreshRateConfig">2</Attribute>
+        </App>
+        <App name="百度地图" pkg="com.baidu.BaiduMap">
+            <Attribute name="PerformanceType">LowPower</Attribute>
+            <Attribute name="RefreshRateConfig">2</Attribute>
+        </App>
+        <App name="腾讯地图" pkg="com.tencent.map">
+            <Attribute name="PerformanceType">LowPower</Attribute>
+            <Attribute name="RefreshRateConfig">2</Attribute>
+        </App>
+        <App name="Google Maps" pkg="com.google.android.apps.maps">
+            <Attribute name="RefreshRateConfig">2</Attribute>
+        </App> -->
+        <!-- 应用后台管理列表 -->
+        <!--<App name="微信" pkg="com.tencent.mm">
+            <Attribute name="ThermalConfig">3010 3010 3010</Attribute>
+        </App>-->
+        <App name="缤纷舞台日服" pkg="com.sega.pjsekai">
+            <Attribute name="RefreshRateConfig">4</Attribute>
+            <Attribute name="PowerSaveRefreshRateConfig">2</Attribute>
+        </App>
+        <App name="缤纷舞台台服" pkg="com.hermes.mk.asia">
+            <Attribute name="RefreshRateConfig">4</Attribute>
+            <Attribute name="PowerSaveRefreshRateConfig">2</Attribute>
+        </App>
+        <App name="缤纷舞台国际服" pkg="com.sega.ColorfulStage.en">
+            <Attribute name="RefreshRateConfig">4</Attribute>
+            <Attribute name="PowerSaveRefreshRateConfig">2</Attribute>
+        </App>
+        <App name="BanG Dream" pkg="com.bilibili.star.bili">
+            <Attribute name="RefreshRateConfig">2</Attribute>
+            <Attribute name="PowerSaveRefreshRateConfig">2</Attribute>
+        </App>
+    </AppList>
+
+</AppPolicy>

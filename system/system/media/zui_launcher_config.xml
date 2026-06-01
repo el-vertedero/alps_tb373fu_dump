@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+<item name="config_overview_show_as_grid" value="true"/>
+<item name="animation_overview_zux_enabled" value="false"/>
+<item name="animation_wallpaper_zoom" value="true"/>
+<item name="enable_app_open_interrupt" value="true"/>
+<!--关闭Dock动态高斯-->
+<item name="show_dock_blur" value="false"/>
+<!--关闭Taskbar动态高斯-->
+<item name="show_taskbar_blur" value="false"/>
+<!--关闭桌面（全局搜索、资源库、编辑态、多任务界面）动态高斯-->
+<item name="show_desktop_blur" value="false"/>
+<!--开启桌面（全局搜索、资源库、编辑态、多任务界面）静态高斯-->
+<item name="show_desktop_blur_static" value="true"/>
+<!--关闭文件夹动态高斯-->
+<item name="show_folder_blur_dynamic" value="false"/>
+<!--打开文件夹静态高斯-->
+<item name="show_folder_blur_static" value="true"/>
+</config>
